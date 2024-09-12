@@ -8,8 +8,7 @@ on:
 
 jobs:
   deploy:
-    permissions:
-      contents: write
+    permissions: write-all
     runs-on: ubuntu-20.04
     env:
       PR_PATH: pull/${{github.event.number}}

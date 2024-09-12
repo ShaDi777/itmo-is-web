@@ -1,4 +1,3 @@
 baseURL = 'http://example.org/' # overriden by github
 languageCode = 'ru'
 title = 'PR previews for Github Pages demo'
-theme = "etch"

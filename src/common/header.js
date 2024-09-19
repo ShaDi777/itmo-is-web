@@ -56,7 +56,7 @@ class ShopHeader extends HTMLElement {
         <!-- BEGIN HEADER TOP RIGHT -->
         <div class="header-top__right">
             <!-- BEGIN LOGIN -->
-            <a class="login__button" href="${root}/src/pages/account.html">
+            <a class="login__button" href="${root}/src/pages/login.html">
             <span class="login__icon">
                 Личный кабинет
             </span>

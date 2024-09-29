@@ -1,5 +1,5 @@
 import {renderReviews} from "./reviews.js";
-import {saveReview} from "./storage.js";
+import {clearPageReviewState, persistPageReviewState, saveReview} from "./storage.js";
 
 (function () {
     const form = document.getElementById('reviewForm');
@@ -21,6 +21,7 @@ import {saveReview} from "./storage.js";
         };
 
         saveReview(review);
+        clearPageReviewState();
         form.reset();
 
         // Обновляем список отзывов после добавления нового
@@ -31,4 +32,33 @@ import {saveReview} from "./storage.js";
     window.addEventListener('DOMContentLoaded', function () {
         renderReviews(reviewsContainer);
     });
+})();
+
+
+// Состояние
+const nameInput = document.getElementById('name');
+const ratingSelect = document.getElementById('rating');
+const reviewTextArea = document.getElementById('reviewText');
+
+// Сохранение состояния в footer
+(function () {
+    const form = document.getElementById('reviewForm');
+
+    nameInput.addEventListener('input', () => persistPageReviewState(form));
+    ratingSelect.addEventListener('change', () => persistPageReviewState(form));
+    reviewTextArea.addEventListener('input',() =>  persistPageReviewState(form));
+})();
+
+// Выгрузка состояния в footer
+(function (){
+    function loadReviewState() {
+        const savedState = JSON.parse(localStorage.getItem('pageReviewState'));
+        if (savedState) {
+            nameInput.value = savedState.name || '';
+            ratingSelect.value = savedState.rating || '5'; // Значение по умолчанию
+            reviewTextArea.value = savedState.text || '';
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', loadReviewState);
 })();

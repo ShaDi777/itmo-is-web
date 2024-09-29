@@ -11,7 +11,7 @@
             const pageLoadTime = navigationEntry.domContentLoadedEventEnd;
             loadInfo.textContent = `Время загрузки страницы: ${Math.round(pageLoadTime)} мс`;
         } else {
-            console.log('Элемента с ID "footer-load__text" не найдено.');
+            console.error('Элемента с ID "footer-load__text" не найдено.');
         }
     });
 })();
@@ -39,15 +39,27 @@
         document.head.appendChild(linkCss);
     });
 
-    // Scripts
+    // Scripts head
     [
-        `${root}/src/script/header.js`,
-        `${root}/src/script/footer.js`,
+        `${root}/src/script/html-edit/header.js`,
+        `${root}/src/script/html-edit/footer.js`,
         `${root}/src/script/main.js`,
     ].forEach(path => {
         const script = document.createElement('script');
         script.type = 'module'
         script.src = path;
         document.head.appendChild(script);
+    });
+
+    // Scripts body
+    [
+        `${root}/src/script/reviews/form-footer.js`,
+    ].forEach(path => {
+        const script = document.createElement('script');
+        script.type = 'module'
+        script.src = path;
+        window.addEventListener("load", (event) => {
+            document.body.appendChild(script)
+        });
     });
 })();

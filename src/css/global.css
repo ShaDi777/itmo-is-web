@@ -24,3 +24,17 @@ main h2 {
     margin-bottom: 10px;
     color: #333;
 }
+
+main h1 {
+    font-size: 36px;
+    color: #2E2B2B;
+}
+
+
+.divider {
+    border: none;
+    height: 2px;
+    background-color: #EC6037;
+    margin: 20px 0;
+    width: 100%;
+}

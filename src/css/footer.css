@@ -1,17 +1,14 @@
 /* Контейнер для всей страницы */
 .page-wrapper {
     font-family: 'Roboto', sans-serif;
-    margin-top: 140px;
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Минимальная высота равна 100% высоты окна */
+    min-height: calc(100vh - 150px); /* Минимальная высота равна 100% высоты окна */
+    height: calc(100vh - 150px); /* Высота экрана минус высота хедера */
     width: 100%;
     overflow-x: hidden;
-}
-
-main {
-    flex: 1;
-    padding: 20px;
+    overflow-y: auto;
 }
 
 /* Основные стили для футера */

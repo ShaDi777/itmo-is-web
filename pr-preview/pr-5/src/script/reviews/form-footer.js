@@ -25,5 +25,7 @@ import {renderReviews} from "./reviews.js";
         if (reviewsContainer) {
             renderReviews(reviewsContainer);
         }
+
+        alert("Ваш отзыв успешно отправлен!")
     });
 })();

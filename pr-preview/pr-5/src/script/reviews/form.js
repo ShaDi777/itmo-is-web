@@ -1,4 +1,5 @@
 import {renderReviews} from "./reviews.js";
+import {saveReview} from "./storage.js";
 
 (function () {
     const form = document.getElementById('reviewForm');

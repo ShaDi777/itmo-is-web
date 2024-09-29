@@ -1,12 +1,16 @@
-
-
 (function () {
-    const menuItems = document.querySelectorAll('nav a');
-    const currentPath = document.location.pathname;
+    window.onload = function () {
+        const currentPath = document.location.pathname;
 
-    menuItems.forEach(item => {
-        if (item.getAttribute('href') === currentPath) {
-            item.classList.add('active');
-        }
-    });
+        const navLinks = document.querySelectorAll('.header-nav__link');
+
+        navLinks.forEach(link => {
+            let linkPathname = new URL(link.href).pathname
+
+            if (linkPathname === currentPath) {
+                link.classList.add('active');
+                link.removeAttribute('href');
+            }
+        });
+    };
 })();

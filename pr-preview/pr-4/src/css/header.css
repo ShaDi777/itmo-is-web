@@ -78,6 +78,13 @@
     text-decoration-thickness: 2px;
 }
 
+.header-nav__link.active {
+    font-weight: bold;
+    color: #EC6037;
+    cursor: default;
+    pointer-events: none;
+}
+
 
 
 /* TOP RIGHT */

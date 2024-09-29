@@ -1,14 +1,9 @@
 class ShopHeader extends HTMLElement {
-    static get observedAttributes() {
-        return ["root"];
-    }
-
     constructor() {
         super();
     }
 
     connectedCallback() {
-        const root = this.getAttribute("root")
         this.innerHTML = `
 <header class="header">
 

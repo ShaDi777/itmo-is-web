@@ -1,15 +1,9 @@
 class ShopFooter extends HTMLElement {
-    static get observedAttributes() {
-        return ["root"];
-    }
-
     constructor() {
         super();
     }
 
     connectedCallback() {
-        const root = this.getAttribute("root")
-
         this.innerHTML = `
 <!-- Подвал -->
 <footer class="footer">
@@ -42,12 +36,17 @@ class ShopFooter extends HTMLElement {
     </div>
     
     <div class="footer__right">
-        <h4>Оставить отзыв</h4>
-        <form>
-            <textarea rows="10" cols="50" maxlength="300" placeholder="Ваш отзыв..."></textarea>
-            <br>
-                <button type="submit">Отправить</button>
-        </form>
+        <div class="footer-review">
+                <h4>Оставить отзыв</h4>
+                <form>
+                    <textarea rows="10" cols="50" maxlength="300" placeholder="Ваш отзыв..."></textarea>
+                    <br>
+                        <button type="submit">Отправить</button>
+                </form>
+        </div>
+        <div class="footer-load">
+                <p id="footer-load__text"></p>
+        </div>
     </div>
 </footer>
         `;

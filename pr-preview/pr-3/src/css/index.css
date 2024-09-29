@@ -1,17 +1,3 @@
-/* Основной блок */
-main {
-    padding: 20px;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
-}
-
-/* Заголовки секций */
-main h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
 /* Стиль для сетки товаров */
 .product-grid {
     display: grid;

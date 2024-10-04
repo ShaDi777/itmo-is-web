@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="./src/css/products.css">
     <link rel="stylesheet" href="./src/css/index.css">
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
     <script>const root = '.';</script>
     <script src="src/script/html-edit/appender.js"></script>
 </head>
@@ -24,6 +27,21 @@
 <div class="page-wrapper">
 
 <main>
+    <!-- Секция с акциями -->
+    <section class="promo-section">
+        <div class="promo-slider">
+            <div class="promo-slide">
+                <img src="./assets/promotions/promo1.jpg" alt="Акция 1">
+            </div>
+            <div class="promo-slide">
+                <img src="./assets/promotions/promo2.jpg" alt="Акция 2">
+            </div>
+            <div class="promo-slide">
+                <img src="./assets/promotions/promo3.jpg" alt="Акция 3">
+            </div>
+        </div>
+    </section>
+
     <!-- Секция с актуальными товарами, акциями и новинками -->
     <section class="attention">
         <h2>Актуальные товары</h2>
@@ -92,5 +110,10 @@
 </div>
 
 <script src="./src/script/index.js"></script>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </body>
 </html>

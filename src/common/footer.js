@@ -15,7 +15,7 @@ class ShopFooter extends HTMLElement {
 <footer class="footer">
     <div class="footer__left">
         <a class="footer-logo" href="${root}/index.html">
-            <img alt="SmartPulse" src="${root}/assets/smart_pulse_vertical.svg">
+            <img alt="SmartPulse" src="${root}/assets/logo/smart_pulse_vertical.svg">
         </a>
         <h4>Контактная информация:</h4>
         <p class="footer-copyrights">SmartPulse 2024</p>
@@ -25,26 +25,26 @@ class ShopFooter extends HTMLElement {
         <ul class="contacts-social">
             <li class="contacts-social__item">
                 <a href="https://t.me/ShaDmi777">
-                    <img src="/assets/telegram-icon.svg" width="24" height="24" alt="telegram">
+                    <img src="${root}/assets/socials/telegram-icon.svg" width="24" height="24" alt="telegram">
                 </a>
             </li>
             <li class="contacts-social__item">
                 <a href="https://vk.com/id0">
-                    <img src="/assets/vk-icon.svg" width="24" height="24" alt="vk">
+                    <img src="${root}/assets/socials/vk-icon.svg" width="24" height="24" alt="vk">
                 </a>
             </li>
             <li class="contacts-social__item">
                 <a href="https://github.com/ShaDi777">
-                    <img src="/assets/github-icon.svg" width="24" height="24" alt="github">
+                    <img src="${root}/assets/socials/github-icon.svg" width="24" height="24" alt="github">
                 </a>
             </li>
         </ul>
     </div>
     
-    <div class="footer__left">
+    <div class="footer__right">
         <h4>Оставить отзыв</h4>
         <form>
-            <textarea rows="4" cols="50" placeholder="Ваш отзыв..."></textarea>
+            <textarea rows="10" cols="50" maxlength="300" placeholder="Ваш отзыв..."></textarea>
             <br>
                 <button type="submit">Отправить</button>
         </form>

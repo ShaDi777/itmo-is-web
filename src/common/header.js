@@ -18,7 +18,7 @@ class ShopHeader extends HTMLElement {
         <!-- BEGIN HEADER TOP LEFT -->
         <div class="header-top__left">
             <a class="header-logo" href="${root}/index.html">
-                <img alt="SmartPulse" src="${root}/assets/smart_pulse_horizontal.svg">
+                <img alt="SmartPulse" src="${root}/assets/logo/smart_pulse_horizontal.svg">
             </a>
         </div>
         <!-- END HEADER TOP LEFT -->
@@ -86,8 +86,15 @@ class ShopHeader extends HTMLElement {
         <div class="header-bottom__center">
             <div class="search-form">
                 <form action="/catalog/" method="get" id="search">
-                    <input type="text" name="search" placeholder="Поиск по сайту">
-                    <input type="submit" value="Найти">
+                    <div class="search-form__cols">
+                            <div class="search-form__col_left">
+                                <input class="search-form__input" type="text" name="search" placeholder="Поиск по сайту">
+                            </div>
+
+                            <div class="search-form__col_right">
+                                <button class="search-form__button" type="submit">Найти</button>
+                            </div>
+                        </div>
                 </form>
             </div>
         </div>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="магазин, смартфон, продажа, электроника, акции">
+    <meta name="description" content="Интернет-магазин по продаже смартфонов. Самые выгодные акции и новинки.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Каталог SmartPulse</title>
+
+    <link rel="stylesheet" href="../../src/css/products.css">
+    <link rel="stylesheet" href="../../src/css/catalog.css">
+
+    <script>const root = '../..';</script>
+    <script src="../script/html-edit/appender.js"></script>
+</head>
+
+<body>
+<shop-header></shop-header>
+
+<div class="page-wrapper">
+    <main>
+        <h1>Каталог товаров</h1>
+        <div id="catalog" class="product-grid catalog-container">
+            <div id="preloader-container" class="preloader-container">
+                <div id="preloader-text" class="preloader-text">Загрузка товаров...</div>
+                <div id="preloader-gif" class="loading-spinner"></div>
+            </div>
+        </div>
+    </main>
+
+    <shop-footer></shop-footer>
+</div>
+
+<script src="../../src/script/catalog.js"></script>
+</body>
+</html>

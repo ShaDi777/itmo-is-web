@@ -1,0 +1,190 @@
+/* Контейнер для всей страницы */
+.page-wrapper {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 150px); /* Минимальная высота равна 100% высоты окна */
+    height: calc(100vh - 150px); /* Высота экрана минус высота хедера */
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Основные стили для футера */
+.footer {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #2E2B2B;
+    color: #ffffff;
+    padding: 40px 20px;
+    border-top: 3px solid #EC6037;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+/* LEFT */
+.footer__left {
+    margin-left: 30px;
+    flex: 1 1 auto;
+    max-width: 500px;
+}
+
+.footer-logo img {
+    width: 200px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.footer__left h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #EC6037;
+}
+
+.footer-copyrights,
+.footer-name,
+.contacts-phone,
+.contacts-email {
+    margin-bottom: 10px;
+}
+
+.contacts-phone__link,
+.contacts-email__link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contacts-phone__link:hover,
+.contacts-email__link:hover {
+    color: #EC6037;
+    text-decoration: underline;
+    text-decoration-color: #EC6037;
+}
+
+
+/* Icons */
+.contacts-social {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.contacts-social__item img {
+    width: 36px;
+    height: 36px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.contacts-social__item img:hover {
+    transform: scale(1.5);
+}
+
+
+
+
+
+/* RIGHT */
+.footer__right {
+    margin-right: 60px;
+    flex: 1 1 auto;
+    max-width: 400px;
+}
+
+.footer__right h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ff6600;
+}
+
+.footer__right form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Стили для поля ввода имени */
+.footer__input-name {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #EC6037;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #2E2B2B;
+    background-color: #ffffff;
+}
+
+/* Стили для селектора оценки */
+.footer__input-rating {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #EC6037;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #2E2B2B;
+    background-color: #ffffff;
+}
+
+
+.footer__right textarea {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #EC6037;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    resize: none;
+    color: #2E2B2B;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.footer__right button {
+    padding: 10px 20px;
+    background-color: #EC6037;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.footer__right button:hover {
+    background-color: #F88F3D;
+}
+
+/* Адаптивность футера */
+@media (max-width: 800px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__left,
+    .footer__right {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}

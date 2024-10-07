@@ -37,15 +37,25 @@ class ShopFooter extends HTMLElement {
     
     <div class="footer__right">
         <div class="footer-review">
-                <h4>Оставить отзыв</h4>
-                <form>
-                    <textarea rows="10" cols="50" maxlength="300" placeholder="Ваш отзыв..."></textarea>
-                    <br>
-                        <button type="submit">Отправить</button>
-                </form>
+            <h4>Оставить отзыв</h4>
+            <form id="footerReviewForm">
+                <input id="footerNameInput" required type="text" placeholder="Ваше имя" class="footer__input-name">
+                
+                <select id="footerRating" required class="footer__input-rating">
+                    <option value="5">5 звёзд</option>
+                    <option value="4">4 звезды</option>
+                    <option value="3">3 звезды</option>
+                    <option value="2">2 звезды</option>
+                    <option value="1">1 звезда</option>
+                </select>
+    
+                <textarea id="footerReviewText" required rows="10" cols="50" maxlength="300" placeholder="Ваш отзыв..."></textarea>
+                <br>
+                <button type="submit">Отправить</button>
+            </form>
         </div>
         <div class="footer-load">
-                <p id="footer-load__text"></p>
+            <p id="footer-load__text"></p>
         </div>
     </div>
 </footer>

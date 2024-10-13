@@ -51,7 +51,7 @@ class ShopHeader extends HTMLElement {
         <!-- BEGIN HEADER TOP RIGHT -->
         <div class="header-top__right">
             <!-- BEGIN LOGIN -->
-            <a class="login__button" href="${root}/src/pages/login.html">
+            <a class="login__button" href="#" data-izimodal-open="#modal-custom">
             <span class="login__icon">
                 Личный кабинет
             </span>

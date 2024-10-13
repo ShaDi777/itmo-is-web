@@ -28,10 +28,10 @@
 
     // Styles
     [
-        `${root}/src/css/global.css`,
-        `${root}/src/css/normalize.css`,
-        `${root}/src/css/header.css`,
-        `${root}/src/css/footer.css`,
+        `${root}/src/css/common/global.css`,
+        `${root}/src/css/common/normalize.css`,
+        `${root}/src/css/common/header.css`,
+        `${root}/src/css/common/footer.css`,
     ].forEach(path => {
         const linkCss = document.createElement('link');
         linkCss.rel = 'stylesheet';

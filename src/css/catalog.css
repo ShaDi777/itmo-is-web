@@ -1,0 +1,32 @@
+/* Прелоадер контейнер */
+.catalog-container {
+    min-height: 60vh
+}
+
+.preloader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+#preloader-text {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+#preloader-gif {
+    align-content: center;
+}
+
+.preloader {
+    display: block;
+    padding: 20px;
+    text-align: center;
+}

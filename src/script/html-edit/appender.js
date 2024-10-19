@@ -32,6 +32,8 @@
         `${root}/src/css/common/normalize.css`,
         `${root}/src/css/common/header.css`,
         `${root}/src/css/common/footer.css`,
+        `https://cdn.jsdelivr.net/npm/izimodal/css/iziModal.css`,
+        `${root}/src/css/common/modal.css`,
     ].forEach(path => {
         const linkCss = document.createElement('link');
         linkCss.rel = 'stylesheet';
@@ -41,6 +43,7 @@
 
     // Scripts head
     [
+        `https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.6.1/js/iziModal.min.js`,
         `${root}/src/script/html-edit/header.js`,
         `${root}/src/script/html-edit/footer.js`,
         `${root}/src/script/main.js`,
@@ -53,6 +56,7 @@
 
     // Scripts body
     [
+        `${root}/src/script/html-edit/modal.js`,
         `${root}/src/script/reviews/form-footer.js`,
     ].forEach(path => {
         const script = document.createElement('script');

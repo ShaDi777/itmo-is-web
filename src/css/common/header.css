@@ -4,13 +4,14 @@
     font-size: 16px;
     background-color: #2E2B2B;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+
+    padding: 15px;
 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+
     border-bottom: 3px solid #EC6037;
 }
 
@@ -119,7 +120,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 15px 0 0 0;
+    margin: 5px 0 0 0;
     background-color: #2E2B2B;
     padding-top: 10px;
 }
@@ -272,6 +273,7 @@
     }
 
     .header-bottom {
-        margin-bottom: 10px;
+        margin-top: 22px;
+        margin-bottom: 17px;
     }
 }

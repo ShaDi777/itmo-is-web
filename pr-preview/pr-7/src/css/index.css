@@ -1,0 +1,64 @@
+/* Центрируем и выделяем секцию "attention" */
+.attention {
+    background-color: #FFEBE0;
+    border: 2px solid #EC6037;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 40px auto;
+    text-align: center;
+    width: 90%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.attention h2 {
+    color: #EC6037;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.attention p {
+    color: #333;
+    font-size: 18px;
+}
+
+.attention strong {
+    color: #EC6037;
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+}
+
+.promo-section {
+    position: relative;
+    margin: 20px auto;
+    width: 60%;
+}
+
+.promo-slider {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.promo-slide {
+    transition: box-shadow 2s;
+    cursor: pointer;
+    position: relative;
+    background-color: #EC6037;
+    width: 100%;
+    height: auto;
+}
+
+.promo-slide img {
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .promo-section {
+        width: 80%;
+    }
+}

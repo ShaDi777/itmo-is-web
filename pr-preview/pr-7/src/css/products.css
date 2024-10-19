@@ -1,0 +1,130 @@
+/* Стиль для сетки товаров */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    /* min-height: 60vh; */
+    position: relative;
+}
+
+/* Стили карточки товара */
+.product-card {
+    background-color: #ffffff;
+    border: 2px solid #EC6037;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    transform: scale(0.95);
+    width: 300px;
+}
+
+.product-card:hover {
+    transform: scale(1);
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.33));
+}
+
+/* Контейнер для изображения */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Изображение товара */
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: opacity 0.3s ease;
+    display: none;
+}
+
+.product-image.loaded {
+    display: block;
+}
+
+.product-card:hover .product-image {
+    opacity: 0.9;
+}
+
+/* Название товара */
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #2E2B2B;
+}
+
+/* Цена товара */
+.product-card p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 0;
+}
+
+/* Жирная цена */
+.product-card strong {
+    color: #EC6037;
+}
+
+/* Стиль для текста наличия товара */
+.in-stock {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.out-of-stock {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Кнопка "Добавить в корзину" */
+.add-to-cart-button {
+    display: inline-block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #EC6037;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #F88F3D;
+}
+
+
+/* Прелоадер загрузочное кольцо */
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #EC6037;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

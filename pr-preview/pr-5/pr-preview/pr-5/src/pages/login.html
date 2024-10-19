@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="магазин, смартфон, продажа, электроника, акции">
+    <meta name="description"
+          content="Интернет-магазин по продаже смартфонов. Самые выгодные акции и новинки.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Личный кабинет пользователя SmartPulse</title>
+
+    <script>const root = '../..';</script>
+    <script src="../script/html-edit/appender.js"></script>
+</head>
+
+<body>
+<shop-header></shop-header>
+
+<div class="page-wrapper">
+    <main>
+        <section class="login">
+            <h1>Вход в личный кабинет</h1>
+            <p>Введите свои данные для входа</p>
+
+            <form action="../../src/pages/account.html" method="POST">
+                <!-- Поле для email -->
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Введите ваш email" required><br><br>
+
+                <!-- Поле для пароля -->
+                <label for="password">Пароль:</label><br>
+                <input type="password" id="password" name="password" placeholder="Введите ваш пароль" required><br><br>
+
+                <!-- Кнопка входа -->
+                <button type="submit">Войти</button>
+            </form>
+
+            <p>Еще не зарегистрированы? <a href="../../src/pages/register.html">Зарегистрироваться</a></p>
+        </section>
+    </main>
+
+    <shop-footer></shop-footer>
+</div>
+</body>
+</html>

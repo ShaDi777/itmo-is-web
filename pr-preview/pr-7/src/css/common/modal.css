@@ -1,0 +1,219 @@
+/* Основные стили для модального окна */
+
+
+#modal-custom .hide {
+    display: none;
+}
+
+#modal-custom {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+#modal-custom .iziModal-content header {
+    background: #f5f5f5;
+    overflow: hidden;
+    width: 100%;
+}
+
+#modal-custom .iziModal-content header a {
+    display: block;
+    float: left;
+    width: 50%;
+    padding: 30px; /* Увеличен внутренний отступ */
+    text-align: center;
+    background: rgba(170, 170, 170, 0.5);
+    color: #333;
+    height: auto;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+#modal-custom .iziModal-content header a.active {
+    background:  #ffffff;
+    font-weight: bold;
+}
+
+#modal-custom .iziModal-content header a:not(.active):hover {
+    box-shadow: inset 0 -10px 20px -10px #aaa;
+}
+
+#modal-custom form label {
+    margin-left: 5px;
+}
+
+#modal-custom .iziModal-content form {
+    padding: 40px; /* Увеличены отступы для раздела */
+    background-color: #ffffff;
+}
+
+#modal-custom .iziModal-content form input:not([type="checkbox"]),
+#modal-custom .iziModal-content form button {
+    width: 100%;
+    border-radius: 4px;
+    border: 2px solid #EC6037;
+    margin-bottom: 30px; /* Увеличен отступ между элементами */
+    margin-top: 10px;
+    padding: 20px; /* Увеличен внутренний отступ */
+    font-size: 16px;
+    color: #333;
+}
+
+#modal-custom .iziModal-content form button {
+    height: auto; /* Убрано фиксированное значение высоты */
+    padding: 15px; /* Увеличен внутренний отступ */
+    background: #EC6037;
+    color: white;
+    margin: 0;
+    border: 0;
+    cursor: pointer;
+    width: 50%; /* Ширина кнопки немного уменьшена для лучшего выравнивания */
+    float: left;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#modal-custom .iziModal-content form button:hover {
+    background-color: #F88F3D;
+}
+
+/* Отдельный стиль для чекбокса */
+#modal-custom .iziModal-content form input[type="checkbox"] {
+    margin-left: 5px;
+    margin-right: 10px;
+    width:18px;
+    height:18px;
+}
+
+#modal-custom .iziModal-content form input[type="checkbox"]:checked {
+    accent-color: #EC6037;
+}
+
+#modal-custom .iziModal-content form a {
+    color: #EC6037;
+}
+
+#modal-custom .iziModal-content form a:hover {
+    color: #F88F3D;
+}
+
+#modal-custom .iziModal-content form .form-group {
+    margin-bottom: 15px;
+}
+
+#modal-custom .iziModal-content form .label-error-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#modal-custom .iziModal-content form .error-message {
+    color: red;
+    margin-left: 5px;
+}
+
+
+#modal-custom .iziModal-content form footer {
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#modal-custom .iziModal-content form button:nth-child(1) {
+    border-radius: 8px 0 0 8px;
+    background: #2E2B2B;
+}
+#modal-custom .iziModal-content form button:nth-child(1):hover {
+    background: #504d4d;
+}
+
+#modal-custom .iziModal-content form button:nth-child(2) {
+    border-radius: 0 8px 8px 0;
+}
+
+#modal-custom .iziModal-content .icon-close {
+    background: #FFF;
+    margin-bottom: 15px;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: 0;
+    color: #a9a9a9;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#modal-custom .iziModal-content .icon-close:hover,
+#modal-custom .iziModal-content .icon-close:focus {
+    color: black;
+}
+
+/* Анимация "тряски" */
+@-webkit-keyframes wobble {
+    from {
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    15% {
+        -webkit-transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -3deg); /* Уменьшено до -10% и -3deg */
+        transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30% {
+        -webkit-transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 2deg); /* Уменьшено до 5% и 2deg */
+        transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+
+    45% {
+        -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg); /* Уменьшено до -5% и -1deg */
+        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+
+    to {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes wobble {
+    from {
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    15% {
+        -webkit-transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -3deg); /* Уменьшено до -10% и -3deg */
+        transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30% {
+        -webkit-transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 2deg); /* Уменьшено до 5% и 2deg */
+        transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+
+    45% {
+        -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg); /* Уменьшено до -5% и -1deg */
+        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+
+    to {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+
+.wobble {
+    -webkit-animation-name: wobble;
+    animation-name: wobble;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}

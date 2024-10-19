@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="магазин, смартфон, продажа, электроника, акции">
+  <meta name="description"
+        content="Интернет-магазин по продаже смартфонов. Самые выгодные акции и новинки.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Личный кабинет пользователя SmartPulse</title>
+
+  <script type="module" src="../../src/common/header.js"></script>
+  <script type="module" src="../../src/common/footer.js"></script>
+</head>
+
+<body>
+<shop-header root="../.."></shop-header>
+
+<main>
+  <section class="registration">
+    <h1>Регистрация нового пользователя</h1>
+    <p>Заполните форму для создания нового аккаунта</p>
+
+    <form action="/src/pages/account.html" method="POST">
+      <!-- Поле для имени -->
+      <label for="name">Логин:</label><br>
+      <input type="text" id="name" name="name" placeholder="Введите ваш логин" required><br><br>
+
+      <!-- Поле для email -->
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" placeholder="Введите ваш email" required><br><br>
+
+      <!-- Поле для телефона -->
+      <label for="phone">Телефон:</label><br>
+      <input type="tel" id="phone" name="phone" placeholder="Введите ваш телефон" required><br><br>
+
+      <!-- Поле для пароля -->
+      <label for="password">Пароль:</label><br>
+      <input type="password" id="password" name="password" placeholder="Введите пароль" required><br><br>
+
+      <!-- Подтверждение пароля -->
+      <label for="confirm_password">Подтвердите пароль:</label><br>
+      <input type="password" id="confirm_password" name="confirm_password" placeholder="Подтвердите пароль" required><br><br>
+
+      <!-- Кнопка отправки формы -->
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+
+    <p>Уже зарегистрированы? <a href="../../src/pages/login.html">Войти</a></p>
+  </section>
+</main>
+
+<shop-footer root="../.."></shop-footer>
+</body>
+</html>

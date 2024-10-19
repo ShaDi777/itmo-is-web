@@ -1,0 +1,35 @@
+/* Стили для таблицы */
+.table {
+    font-size: 16px;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table th {
+    background-color: #EC6037;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Чередование цвета для строк */
+.table tr:nth-child(even) {
+    background-color: #FFE5D1;
+}
+
+.table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .table {
+        font-size: 14px;
+    }
+}

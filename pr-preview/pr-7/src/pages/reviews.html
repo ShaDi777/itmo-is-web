@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="магазин, смартфон, продажа, электроника, акции">
+    <meta name="description"
+          content="Интернет-магазин по продаже смартфонов. Самые выгодные акции и новинки.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Отзывы SmartPulse</title>
+
+    <link rel="stylesheet" href="../../src/css/reviews.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>const root = '../..';</script>
+    <script src="../script/html-edit/appender.js"></script>
+</head>
+
+<body>
+<shop-header></shop-header>
+
+<div class="page-wrapper">
+
+    <main class="reviews-main">
+        <h2 class="reviews-title">Оставить отзыв</h2>
+
+        <form id="reviewForm" class="review-form">
+            <label for="name" class="review-form__label">Имя:</label>
+            <input type="text" id="name" name="name" class="review-form__input" required>
+
+            <label for="rating" class="review-form__label">Оценка:</label>
+            <select id="rating" name="rating" class="review-form__select" required>
+                <option value="5">5 звёзд</option>
+                <option value="4">4 звезды</option>
+                <option value="3">3 звезды</option>
+                <option value="2">2 звезды</option>
+                <option value="1">1 звезда</option>
+            </select>
+
+            <label for="reviewText" class="review-form__label">Отзыв:</label>
+            <textarea id="reviewText" name="reviewText" class="review-form__textarea" rows="5" required
+                      maxlength="5000"></textarea>
+
+            <button type="submit" class="review-form__button">Отправить отзыв</button>
+        </form>
+
+        <hr class="divider">
+        <h2 class="reviews-list-title">Отзывы</h2>
+        <div id="reviewsContainer" class="reviews-container"></div>
+    </main>
+
+    <shop-footer></shop-footer>
+</div>
+
+<script type="module" src="../script/reviews/textarea-resize.js"></script>
+<script type="module" src="../script/reviews/reviews.js"></script>
+<script type="module" src="../script/reviews/form.js"></script>
+</body>
+</html>
